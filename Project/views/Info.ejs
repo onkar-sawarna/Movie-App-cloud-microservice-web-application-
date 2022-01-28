@@ -1,16 +1,22 @@
 <%- include("./partials/header")%>
 <!--Main Page-->
 <div class="container">
-    <h1><%=movie.Title%></h1>
+   <br />
     <!--Card-->
-  <div class="card flex-row flex-wrap">
+  <div class="card border-success mb-3">
+    <div class="card-header bg-transparent border-success"> <h1><%=movie.Title%></h1></div>
     <div class="card-header border-0">
       <img src="<%=movie.Poster%>" alt="Poster" />
     </div>
-    <div class="card-block px-2">
-      <h4 class="card-title"><%=movie.Title%></h4>
-      <p class="card-text"><%=movie.Plot%></p>
-      <p class="card-text">Actors: <%=movie.Actors%></p>
+    <div class="card-body text-secondary">
+      <!-- <h4 class="card-title"><%=movie.Title%> </h4>  -->
+      <h5>IMDB Rating: <%=movie.imdbRating%>/10</h5>
+      <p class="card-text">--->Genre       : <%=movie.Genre%></p>
+      <p class="card-text">--->Starring    : <%=movie.Actors%></p>
+      <p class="card-text">--->Director    : <%=movie.Director%></p>
+      <p class="card-text">--->Awards      : <%=movie.Awards%></p>
+      <p class="card-text">--->Runtime     : <%=movie.Runtime%></p>
+      <p class="card-text">Storyline : <%=movie.Plot%></p>
     </div>
     <div class="w-100"></div>
     <div class="card-footer w-100 text-muted">Box Office: <%=movie.BoxOffice%></div>
